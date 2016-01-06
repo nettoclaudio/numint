@@ -1,0 +1,48 @@
+-----------
+What is it?
+-----------
+
+    numint is a new numerical integrator to *NIX's users. It works to estimate
+functions they are so hard to find a primitive. Maybe this task is so hard, then
+we use threads to accelerate it.
+
+--------------
+How compiling?
+--------------
+
+    The best way to compile is to use "make". You also will need a compiler, we
+recommend "gcc" or "g++", and the easier to compile "make".
+    Ensure they are installed and so run:
+
+    $ make
+
+    It will generate a executable program called "numint". Sucess!!!
+
+----------------------
+Command Line Arguments
+----------------------
+
+Example: $ ./numint --function "e^(x^(2))" --from 0 --to 100 --error 1000
+            --thread MAX
+
+  This command will return a numerical approximation of a given function with
+limits of integration, and maximum error. The processing  will be working with
+maximum of CPU's cores. A brief explain of arguments is below:
+
+    -f, --function  Function that will be evaluated.
+        Required.
+
+    -a, --from      Integration start interval
+        Required.
+
+    -b, --to        Integration end interval.
+        Required.
+
+    -e, --error     Maximum error to estimate the integrate.
+        Required.
+
+    -t, --thread    Numbers of threads to concurrent approach.
+        Optional.
+
+    -v, --verbose   Show messages while the application runs.
+        Optional.
